@@ -1,2 +1,6 @@
 GET localhost:8080/proxy
 Content-Type: */*
+
+###
+GET 192.168.2.54/trigger
+Content-Type: */*

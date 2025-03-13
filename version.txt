@@ -1,1 +1,4 @@
+Version 1.0.1
+- fix bug url su linux
+
 Version 1.0.0 Alpha
