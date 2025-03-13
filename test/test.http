@@ -4,3 +4,6 @@ Content-Type: */*
 ###
 GET 192.168.2.54/trigger
 Content-Type: */*
+
+###
+GET http://151.55.205.243:8080/proxy
