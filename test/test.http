@@ -7,3 +7,6 @@ Content-Type: */*
 
 ###
 GET http://151.55.205.243:8080/proxy
+
+###
+GET https://www.simonecelia.it/be/controllers/gate.php
