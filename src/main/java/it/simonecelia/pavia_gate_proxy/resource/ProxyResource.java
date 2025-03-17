@@ -6,6 +6,7 @@ import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
@@ -19,8 +20,8 @@ public class ProxyResource {
 
 	@GET
 	@Produces ( MediaType.APPLICATION_JSON )
-	public String proxyRequest () {
-		Log.info ( "Ricevuta chiamata" );
+	public String proxyRequest ( @QueryParam ( "ip" ) String callerIp ) {
+		Log.infof ( "Ricevuta chiamata da IP: %s", callerIp );
 		return externalService.getResource ();
 	}
 }

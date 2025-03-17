@@ -1,3 +1,7 @@
+Version 1.0.2
+- added logs to file
+- added ip tracking
+
 Version 1.0.1
 - fix bug url su linux
 

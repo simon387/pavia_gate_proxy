@@ -1,4 +1,4 @@
-GET localhost:8080/proxy
+GET localhost:8080/proxy?ip=kek
 Content-Type: */*
 
 ###
