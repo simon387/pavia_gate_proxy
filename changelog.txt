@@ -1,3 +1,6 @@
+Version 1.0.4
+- added html parser
+
 Version 1.0.3
 - added /info endpoint
 

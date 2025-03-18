@@ -2,6 +2,7 @@ package it.simonecelia.pavia_gate_proxy.resource;
 
 import io.quarkus.logging.Log;
 import it.simonecelia.pavia_gate_proxy.client.ExternalServiceClient;
+import it.simonecelia.pavia_gate_proxy.util.HtmlUtils;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -30,6 +31,7 @@ public class ProxyResource {
 	@Produces ( MediaType.TEXT_HTML )
 	public String getInfo ( @QueryParam ( "ip" ) String callerIp ) {
 		Log.infof ( "Ricevuta chiamata /info da IP: %s", callerIp );
-		return externalService.getInfo ();
+		var htmlResponse = externalService.getInfo ();
+		return HtmlUtils.updateUptime ( htmlResponse );
 	}
 }
