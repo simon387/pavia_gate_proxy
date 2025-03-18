@@ -22,6 +22,14 @@ public class ProxyResource {
 	@Produces ( MediaType.APPLICATION_JSON )
 	public String proxyRequest ( @QueryParam ( "ip" ) String callerIp ) {
 		Log.infof ( "Ricevuta chiamata da IP: %s", callerIp );
-		return externalService.getResource ();
+		return externalService.callTrigger ();
+	}
+
+	@GET
+	@Path ( "/info" )
+	@Produces ( MediaType.TEXT_HTML )
+	public String getInfo ( @QueryParam ( "ip" ) String callerIp ) {
+		Log.infof ( "Ricevuta chiamata /info da IP: %s", callerIp );
+		return externalService.getInfo ();
 	}
 }
