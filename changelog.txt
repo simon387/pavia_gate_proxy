@@ -1,3 +1,6 @@
+Version 1.0.6
+- fix warning on properties
+
 Version 1.0.5
 - added interceptor for connections errors
 
