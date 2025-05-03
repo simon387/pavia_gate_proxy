@@ -7,7 +7,7 @@ If you want to learn more about Quarkus, please visit its website: <https://quar
 ## Running prod
 
 ```shell script
-java -jar target/quarkus-app/quarkus-run.jar
+git pull; mvn clean install;java -jar target/quarkus-app/quarkus-run.jar
 ```
 
 ## Running the application in dev mode
